@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-   <div id="main" style="height: 400px;width:650px"></div>
+   <div id="main" style="height: 400px;width:720px"></div>
 </body>
 </html>
 <style type="text/css">
@@ -33,12 +33,43 @@
       },
       tooltip: {},
       legend: {
-          data:['销量','指标']
+          data:['折线图折线图','柱状图']
       },
       xAxis: {
           data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","袜子","高跟鞋","袜子","袜子","袜子","高跟鞋","袜子"]
       },
-      yAxis: {},
+      yAxis: [
+            {
+                type: 'value',
+                scale: true,
+                name: '(m b)',
+                max: 30,
+                min: 0,
+                boundaryGap: [0.2, 0.2],
+                axisPointer:{
+                    label:{show:false}
+                },
+                axisLine:{
+                    show:true
+                },
+                axisLabel:{
+                    color:'#fff'
+                },
+            },
+            {
+                type: 'value',
+                scale: true,
+                name: '预购量',
+                max: 1200,
+                min: 0,
+                boundaryGap: [0.2, 0.2],
+                axisLabel:{
+                    color:'#fff',
+                    formatter: '{value} ml'
+                }
+
+            }
+        ],
       series: [
         {
             name: '销量',
